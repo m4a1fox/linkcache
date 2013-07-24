@@ -1,0 +1,84 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  text-align: center;
+  text-stroke: 1px rgba(255,255,255,0.1);
+  color: #f6f6f6;
+  background: url("../images/bg.png");
+  font-family: Josefin Sans Std Light;
+  margin: 0 auto;
+  padding: 0;
+}
+a {
+  color: #00b7ff;
+}
+body div.content {
+  width: 1000px;
+  margin: 0 auto;
+}
+p {
+  margin: 0 0 10px;
+}
+.lead {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 30px;
+}
+#head {
+  height: 110px;
+  border-bottom: 1px solid #f6f6f6;
+}
+#head .content {
+  padding-top: 30px;
+}
+#head .logo {
+  width: 250px;
+  text-align: left;
+  float: left;
+}
+#head .logo span {
+  font-size: 42px;
+}
+#head #log-in {
+  text-align: right;
+  margin-top: 10px;
+}
+#head #log-in span {
+  margin-right: 10px;
+}
+#head #log-in span input {
+  outline: none;
+}
+#head #log-in input {
+  padding: 3px 5px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  outline: none;
+}
+#head #log-in input[type=text] {
+  width: 160px;
+}
+#head #log-in input[type=submit] {
+  cursor: pointer;
+}
+p.lead {
+  padding-top: 1.5%;
+  font-size: 24px;
+  line-height: 30px;
+}
+.explain {
+  text-align: left;
+  min-height: 310px;
+}
+.explain .img {
+  float: left;
+  margin-right: 30px;
+}
+.explain .text {
+  vertical-align: top;
+  font-size: 18px;
+  line-height: 24px;
+}
