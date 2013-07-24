@@ -7,7 +7,6 @@ var express = require('express')
     , user = require('./routes/user')
     , http = require('http')
     , path = require('path')
-    , EmployeeProvider = require('./user').EmployeeProvider
     , nodemailer = require('nodemailer');
 
 var app = express();
@@ -29,7 +28,6 @@ if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 
-var employeeProvider = new EmployeeProvider('localhost', 27017);
 
 app.get('/', function (req, res) {
     employeeProvider.findAll(function (error, user) {
@@ -79,15 +77,3 @@ app.get('/user/create', function (req, res) {
 });
 
 //save new user
-app.post('/user/create', function (req, res) {
-    employeeProvider.save({
-        title: req.param('title'),
-        name: req.param('name')
-    }, function (error, docs) {
-        res.redirect('/')
-    });
-});
-
-http.createServer(app).listen(app.get('port'), function () {
-    console.log('Express server listening on port ' + app.get('port'));
-});
