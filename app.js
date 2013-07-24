@@ -28,16 +28,9 @@ if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 
-
 app.get('/', function (req, res) {
     employeeProvider.findAll(function (error, user) {
         res.render('index');
-
-
-        res.render('index', {
-            title: 'User',
-            users: user
-        });
     });
 });
 
@@ -70,10 +63,6 @@ app.get('/sendmail', function (req, res) {
 });
 
 
-app.get('/user/create', function (req, res) {
-    res.render('new_user', {
-        title: 'New User'
-    });
+http.createServer(app).listen(app.get('port'), function () {
+    console.log('Express server listening on port ' + app.get('port'));
 });
-
-//save new user
